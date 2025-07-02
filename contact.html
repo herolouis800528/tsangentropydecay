@@ -25,6 +25,26 @@
       font-weight: bold;
       color: #0066cc;
     }
+    .contact-buttons {
+      margin: 1.5em 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1em;
+    }
+    .btn-link {
+      display: inline-block;
+      background-color: #0066cc;
+      color: white;
+      padding: 0.6em 1em;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 0.95em;
+      transition: background-color 0.2s ease;
+    }
+    .btn-link:hover {
+      background-color: #004c99;
+    }
     form {
       margin-top: 2em;
       background: #fff;
@@ -80,16 +100,14 @@
 
   <p class="email">📧 Email: <a href="mailto:louis_hlt@tsangentropydecay.org.uk">louis_hlt@tsangentropydecay.org.uk</a></p>
 
-  <p>
-    🔗 <strong>LinkedIn:</strong> 
-    <a href="https://www.linkedin.com/in/louis-h-l-tsang-76013736/" target="_blank">
-      linkedin.com/in/louis-h-l-tsang-76013736
-    </a><br>
-    📘 <strong>Google Scholar:</strong> 
-    <a href="https://scholar.google.co.uk/citations?user=66g1R-IAAAAJ&hl=en" target="_blank">
-      scholar.google.co.uk/citations?user=66g1R-IAAAAJ
+  <div class="contact-buttons">
+    <a href="https://www.linkedin.com/in/louis-h-l-tsang-76013736/" target="_blank" class="btn-link">
+      🔗 LinkedIn Profile
     </a>
-  </p>
+    <a href="https://scholar.google.co.uk/citations?user=66g1R-IAAAAJ&hl=en" target="_blank" class="btn-link">
+      📘 Google Scholar
+    </a>
+  </div>
 
   <form action="https://formspree.io/f/xjkrzbaj" method="POST">
     <label for="name">Your Name</label>
