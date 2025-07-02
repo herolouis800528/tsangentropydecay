@@ -32,22 +32,30 @@
       border-radius: 8px;
       padding: 1.5em;
     }
+    label {
+      display: block;
+      margin-top: 1em;
+      font-weight: bold;
+    }
     input, textarea {
       width: 100%;
-      margin-bottom: 1em;
+      margin-top: 0.3em;
       padding: 0.5em;
       border: 1px solid #aaa;
       border-radius: 4px;
+      font-size: 1em;
     }
     input[type="submit"] {
       background-color: #0066cc;
       color: white;
       border: none;
       cursor: pointer;
-    }
-    #response-message {
-      font-weight: bold;
       margin-top: 1em;
+      font-size: 1em;
+      padding: 0.75em 1em;
+    }
+    input[type="submit"]:hover {
+      background-color: #004c99;
     }
     footer {
       margin-top: 3em;
@@ -68,7 +76,7 @@
     <a href="contact.html">Contact</a>
   </nav>
 
-  <p>If you are interested in the theory, would like to collaborate, or have questions, feel free to reach out.</p>
+  <p>If you are interested in the theory, would like to collaborate, or have questions, feel free to reach out using the form below or via email.</p>
 
   <p class="email">📧 Email: <a href="mailto:louis_hlt@tsangentropydecay.org.uk">louis_hlt@tsangentropydecay.org.uk</a></p>
 
@@ -82,50 +90,19 @@
       scholar.google.co.uk/citations?user=66g1R-IAAAAJ
     </a>
   </p>
-<h2>Contact Form</h2>
-  <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScODDkApUZG5NdUlencfTXk0vIicJpXb62IKLtFJiU0OB1YHA/viewform?embedded=true" width="640" height="689" frameborder="0" marginheight="0" marginwidth="0">
-    Loading…
-  </iframe>
 
-  <p id="response-message"></p>
+  <form action="https://formspree.io/f/xjkrzbaj" method="POST">
+    <label for="name">Your Name</label>
+    <input type="text" name="name" id="name" required>
 
-  <script>
-    const form = document.getElementById('contact-form');
-    const response = document.getElementById('response-message');
+    <label for="email">Your Email</label>
+    <input type="email" name="email" id="email" required>
 
-    form.addEventListener('submit', async function (e) {
-      e.preventDefault();
-      response.textContent = "Sending...";
+    <label for="message">Message</label>
+    <textarea name="message" id="message" rows="5" required></textarea>
 
-      const data = {
-        name: form.name.value,
-        email: form.email.value,
-        message: form.message.value
-      };
-
-      try {
-        const res = await fetch('https://script.google.com/macros/s/AKfycbyD4wKklFTN9cCXlKkMyPAgPpVNXRX2fsIViUOsEN6588OVOXoskN5CoK0wRujM-HDa/exec', {
-          method: 'POST',
-          body: JSON.stringify(data),
-          headers: {
-            'Content-Type': 'application/json'
-          }
-        });
-
-        if (res.ok) {
-          response.style.color = "green";
-          response.textContent = "✅ Thank you! Your message has been sent.";
-          form.reset();
-        } else {
-          response.style.color = "red";
-          response.textContent = "❌ Error sending message.";
-        }
-      } catch (error) {
-        response.style.color = "red";
-        response.textContent = "❌ Connection failed.";
-      }
-    });
-  </script>
+    <input type="submit" value="Send Message">
+  </form>
 
   <footer>
     <p>© 2025 TsangEntropyDecay.org.uk</p>
