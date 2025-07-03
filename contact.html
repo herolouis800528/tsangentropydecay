@@ -32,7 +32,20 @@
       text-decoration: none;
       color: #0066cc;
     }
-    
+    .nav-button {
+      display: inline-block;
+      margin: 0.3em;
+      padding: 0.4em 1em;
+      background-color: #E80000;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      font-size: 0.95em;
+      transition: background-color 0.3s ease;
+    }
+    .nav-button:hover {
+      background-color: #810000;
+    }
     .email {
       font-size: 1.1em;
       font-weight: bold;
@@ -100,14 +113,14 @@
 <body>
   <h1>Contact</h1>
 
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="framework.html">Framework</a>
-    <a href="papers.html">Papers</a>
-    <a href="books.html">Books</a>
-    <a href="contact.html">Contact</a>
-  </nav>
+ <nav>
+  <a class="nav-button" href="index.html">HOME</a>
+  <a class="nav-button" href="about.html">ABOUT</a>
+  <a class="nav-button" href="framework.html">FRAMEWORK</a>
+  <a class="nav-button" href="papers.html">PAPAERS</a>
+  <a class="nav-button" href="books.html">BOOKS</a>
+  <a class="nav-button" href="contact.html">CONTACT</a>
+</nav>
 
   <p>If you are interested in the theory, would like to collaborate, or have questions, feel free to reach out using the form below or via email.</p>
 
