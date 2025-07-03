@@ -9,28 +9,58 @@
       max-width: 800px;
       margin: auto;
       padding: 2em;
-      background-color: #f9f9f9;
       line-height: 1.6;
+      background-color: transparent;
+      position: relative;
+      z-index: 1;
+      color: #ffffff;
     }
-    h1 {
-      color: #333;
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: url('Index Background.gif') no-repeat center center fixed;
+      background-size: cover;
+      z-index: -1;
+      opacity: 1; /* Adjust brightness here */
+    }
+    h1, h2 {
+      color: #ffffff;
     }
     nav a {
       margin-right: 1em;
       text-decoration: none;
-      color: #0066cc;
+      color: #ffffff;
+    }
+    .nav-button {
+      display: inline-block;
+      margin: 0.3em;
+      margin-bottom: 2em;
+      padding: 0.4em 1em;
+      background-color: #E80000;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      font-size: 0.95em;
+      transition: background-color 0.3s ease;
+    }
+    .nav-button:hover {
+      background-color: #810000;
     }
     .paper {
       margin-bottom: 2em;
       padding: 1em;
-      background: #fff;
+      background: #ffcbb6;
       border: 1px solid #ccc;
       border-radius: 8px;
+      opacity: 0.8;
+      color: #000000;
     }
     .paper-title {
       font-size: 1.1em;
       font-weight: bold;
       margin-bottom: 0.4em;
+      color: #000000;
     }
     .paper-buttons a {
       display: inline-block;
@@ -38,13 +68,13 @@
       margin-top: 0.5em;
       padding: 0.5em 1em;
       border-radius: 5px;
-      background-color: #0066cc;
+      background-color: #E80000;
       color: white;
       text-decoration: none;
       font-size: 0.9em;
     }
     .paper-buttons a:hover {
-      background-color: #004c99;
+      background-color: #810000;
     }
     .pdf-embed {
       margin-top: 1em;
@@ -63,12 +93,12 @@
   <h1>Published Papers</h1>
 
   <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="framework.html">Framework</a>
-    <a href="papers.html">Papers</a>
-    <a href="books.html">Books</a>
-    <a href="contact.html">Contact</a>
+    <a class="nav-button" href="index.html">HOME</a>
+    <a class="nav-button" href="about.html">ABOUT</a>
+    <a class="nav-button" href="framework.html">FRAMEWOKR</a>
+    <a class="nav-button" href="papers.html">PAPERS</a>
+    <a class="nav-button" href="books.html">BOOKS</a>
+    <a class="nav-button" href="contact.html">CCONTACT</a>
   </nav>
 
   <p>All papers are hosted on <strong>Zenodo</strong>, open-access, and include DOI-backed citations and direct PDF downloads.</p>
