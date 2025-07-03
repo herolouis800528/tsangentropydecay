@@ -38,6 +38,20 @@
       text-decoration: none;
       color: red;
     }
+    .nav-button {
+      display: inline-block;
+      margin: 0.3em;
+      padding: 0.4em 1em;
+      background-color: red;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      font-size: 0.95em;
+      transition: background-color 0.3s ease;
+    }
+    .nav-button:hover {
+      background-color: #004c99;
+    }
     .headline {
       font-size: 2.0em;
       font-weight: bold;
@@ -63,13 +77,13 @@
 <body>
   <h1>The Entropy Decay Theory </h1>
   
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="framework.html">Framework</a>
-    <a href="papers.html">Papers</a>
-    <a href="books.html">Books</a>
-    <a href="contact.html">Contact</a>
+ <nav>
+   <a class="nav-button" href="index.html">Home</a>
+   <a class="nav-button" href="about.html">About</a>
+   <a class="nav-button" href="framework.html">Framework</a>
+   <a class="nav-button" href="papers.html">Papers</a>
+   <a class="nav-button" href="books.html">Books</a>
+   <a class="nav-button" href="contact.html">Contact</a>
   </nav>
 
   <div class="headline">Time is not fundamental. Space is not fixed. Only Entropy is increasing.</div>
@@ -90,7 +104,6 @@
     <li>All matter traps entropy historically; gravity emerges as an action-reaction between trapped internal entropy and the planet-scale entropy curvature gradient.</li>
     <li>With the correct resonant triggering, entropy can be released in cascades — unlocking memory, motion, or collapse.</li>
   </ul>
-
 
   <footer>
     <p>© 2025 TsangEntropyDecay.org.uk</p>
