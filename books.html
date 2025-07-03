@@ -10,15 +10,41 @@
       margin: auto;
       padding: 2em;
       line-height: 1.6;
-      background-color: #f9f9f9;
+      background-color: transparent;
+      position: relative;
+      z-index: 1;
+      color: #ffffff;
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: url('Index Background.gif') no-repeat center center fixed;
+      background-size: cover;
+      z-index: -1;
+      opacity: 1; /* Adjust brightness here */
     }
     h1, h2 {
-      color: #333;
+      color: #ffffff;
     }
     nav a {
       margin-right: 1em;
       text-decoration: none;
       color: #0066cc;
+    }
+    .nav-button {
+      display: inline-block;
+      margin: 0.3em;
+      padding: 0.4em 1em;
+      background-color: #E80000;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      font-size: 0.95em;
+      transition: background-color 0.3s ease;
+    }
+    .nav-button:hover {
+      background-color: #810000;
     }
     .book {
       display: flex;
